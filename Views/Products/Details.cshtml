@@ -1,0 +1,36 @@
+﻿@model emarket.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="container text-center header-view">
+    <h1>@Model.name - <span>@Model.price$</span> (@Model.Category.name) </h1>
+    <p>here you can see all info about that item...</p>
+</div>
+
+<div class="row">
+
+    <div class="col">
+        <div class="upload-img">
+            <img id="img" src="@Url.Content(Model.image)" name="img">
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header text-center">Item Info</h5>
+            <div class="card-body item-details">
+                <div>Name : <span>@Model.name</span> </div>
+                <div>Description : <span>@Model.description</span> </div>
+                <div>Price : <span>@Model.price$</span> </div>
+                <div>Category : <span>@Model.Category.name</span> </div>
+                <div class="container text-center">
+                    <a class="btn btn-success" href="@Url.Action("Edit", "Products", new { id = Model.Id })">Update</a> | <a class="btn btn-danger" href="@Url.Action("Delete", "Products", new { id = Model.Id })">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

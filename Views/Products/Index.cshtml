@@ -1,0 +1,54 @@
+﻿@model IEnumerable<emarket.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container text-center header-view">
+	<h1></h1>
+</div>
+
+<div class="manage-items">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eaeaea;">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="select_all_products" style="cursor: pointer;">All</a>
+                </li>
+
+                <li class="nav-item">
+                    @Html.DropDownList("categories_ajax", null,"Select Category ~", htmlAttributes: new { @class = "form-control nav-ajax" })
+                </li>
+
+                <li class="nav-item">
+                    <a href='@Url.Action("Create","Products")' class="btn btn-link align-self-end"><i class="fa fa-plus"></i> Add New item</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <div class="item-view" id="category-select">
+        @foreach (var product in Model)
+        {
+            <div class="card item-part" style="width: 18rem;">
+                <img src="@Url.Content(product.image)" class="img-thumbnail" style="height:170px">
+                <div class="card-body">
+                    <h4 class="card-title" style="margin-bottom: 25px">@product.name</h4>
+                    <hr />
+                    <span style="color: grey">Price: @product.price$</span>
+                </div>
+                <div class="item-part-overlay text-center">
+                    <a href="@Url.Action("Details" ,"Products" ,new { id=product.Id })" style="color: white" class="btn btn-success"><i class="fab fa-pagelines"></i> View</a>
+                </div>
+            </div>
+        }
+        <div class="clear"></div><!-- this div for clearing float  -->
+    </div>
+</div>

@@ -1,0 +1,183 @@
+﻿h1 {
+    font-family: 'Courgette', cursive;
+}
+
+h1 span {
+    color: #007bff;
+    font-weight: bolder;
+}
+
+.header-view p {
+    color: #888;
+    margin-bottom: 70px
+}
+
+.clear {
+    clear: both;
+}
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+    /* Start navbar*/
+
+        .navbar-brand {
+            margin-left: 47%;
+            font-family: 'Lobster', cursive;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+    /* End navbar*/
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+    /* Start Carousel*/
+
+        .carousel-inner {
+            height: 600px !important;
+        }
+
+        .carousel-inner:after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 600px;
+            display: block;
+            left: 0;
+            top: 0;
+            content: "";
+            background: rgba(0,0,0,.5);
+        }
+
+    /* End Carousel*/
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+    /* Start item-cards*/
+
+        .manage-items nav {
+            border-radius: 40px;
+        }
+
+        .manage-items .nav-item {
+            margin-left: 215px;
+        }
+
+        .manage-items .nav-ajax{
+            background-color: #ffffff00;
+            border: 1px solid #6fa3b7;
+            border-radius: 25px;
+        }
+
+        .item-view {
+            margin-top: 25px;
+        }
+
+        .item-part {
+            float: left;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            box-shadow: 9px 9px 16px #a9a5a5;
+            cursor: pointer;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .item-part-overlay {
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            background-color: #0000006e;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .item-part:hover .item-part-overlay {
+            opacity: 1;
+        }
+
+        .item-part-overlay a {
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            margin-left: 10px;
+            position: relative;
+            top: 40%;
+            right: -85%;
+        }
+
+        .item-part-overlay:hover a {
+            right: 0%;
+        }
+
+    /* End item-cards*/
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+    /* Start profile-info*/
+
+        .item-details div {
+            padding: 10px
+        }
+
+        .item-details span {
+            color: #d800ff;
+        }
+
+    /* End profile-info*/
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+	/* start upload image*/
+
+		.upload-img{
+			position: relative;
+		}
+		.upload-img img{
+			height: 100%;
+			width: 90%;
+			box-shadow: 9px 4px 22px #9e9999;
+		}
+		.overlay-upload-img{
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #0000006e;
+			opacity: 0;
+		    height: 100%;
+			width: 90%;
+		}
+		.overlay-upload-img div{
+		    position: relative;
+    		top: 45%;
+			font-size: x-large;
+			color: #d2c6c6;
+		}
+		.upload-img:hover .overlay-upload-img{
+			opacity: 1;
+			cursor: pointer;
+		}
+		.upload-img input[type="file"]{
+			position: absolute;
+			top: 0;
+			z-index: 999;
+			height: 100%;
+		    width: 100%;
+		    opacity: 0;
+		    cursor: pointer;
+		}
+
+	/* end upload image*/
